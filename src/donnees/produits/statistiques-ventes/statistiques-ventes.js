@@ -1,0 +1,96 @@
+let dataset = [
+    {
+      "Product": "20in Monitor",
+      "Sales": 4129
+    },
+    {
+      "Product": "27in 4K Gaming Monitor",
+      "Sales": 6244
+    },
+    {
+      "Product": "27in FHD Monitor",
+      "Sales": 7550
+    },
+    {
+      "Product": "34in Ultrawide Monitor",
+      "Sales": 6199
+    },
+    {
+      "Product": "AA Batteries (4-pack)",
+      "Sales": 27635
+    },
+    {
+      "Product": "AAA Batteries (4-pack)",
+      "Sales": 31017
+    },
+    {
+      "Product": "Apple Airpods Headphones",
+      "Sales": 15661
+    },
+    {
+      "Product": "Bose SoundSport Headphones",
+      "Sales": 13457
+    },
+    {
+      "Product": "Flatscreen TV",
+      "Sales": 4819
+    },
+    {
+      "Product": "Google Phone",
+      "Sales": 5532
+    },
+    {
+      "Product": "iPhone",
+      "Sales": 6849
+    },
+    {
+      "Product": "LG Dryer",
+      "Sales": 646
+    },
+    {
+      "Product": "LG Washing Machine",
+      "Sales": 666
+    },
+    {
+      "Product": "Lightning Charging Cable",
+      "Sales": 23217
+    },
+    {
+      "Product": "Macbook Pro Laptop",
+      "Sales": 4728
+    },
+    {
+      "Product": "ThinkPad Laptop",
+      "Sales": 4130
+    },
+    {
+      "Product": "USB-C Charging Cable",
+      "Sales": 23975
+    },
+    {
+      "Product": "Vareebadd Phone",
+      "Sales": 2068
+    },
+    {
+      "Product": "Wired Headphones",
+      "Sales": 20557
+    }
+   ];
+   
+  let abscisses = [];
+  let ordonnees = [];
+  
+  for (let i = 0; i < dataset.length; i++) {
+    abscisses.push(dataset[i].Product);
+    ordonnees.push(dataset[i].Sales);
+  }
+  
+  let data = [
+    {
+      x: abscisses,
+      y: ordonnees,
+      type: 'bar'
+    }
+  ];
+  
+  Plotly.newPlot('visHolder', data);

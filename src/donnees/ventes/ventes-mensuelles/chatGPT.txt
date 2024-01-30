@@ -1,0 +1,67 @@
+import '../../../data/mensuel.json';
+
+const projectName = 'ventes-mensuelles';
+
+// Load the data
+var dataset = '../../../data/mensuel.json';
+ 
+ // Set the dimensions and margins of the chart
+ var margin = {top: 20, right: 20, bottom: 30, left: 40},
+     width = 960 - margin.left - margin.right,
+     height = 500 - margin.top - margin.bottom;
+ 
+ // Create an SVG element in your HTML file
+ var svg = d3.select(".visHolder")
+             .append("svg")
+             .attr("width", width + margin.left + margin.right)
+             .attr("height", height + margin.top + margin.bottom)
+             .append("g")
+             .attr("transform", 
+                   `translate(${margin.left}, ${margin.top})`);
+ 
+ // Create scales for x-axis and y-axis 
+ var x = d3.scaleBand()
+           .range([0, width])
+           // Change domain based on Mois value 
+           .domain(data.map(d => d.Month))
+           .padding(0.1);
+ var y = d3.scaleLinear()
+           .range([height, 0])
+           // Change domain based on Ventes value 
+           .domain([0, d3.max(data, d => Number(d.Sales))]);
+ 
+ // Append rect elements to the SVG element 
+ svg.selectAll(".bar")
+     .data(data)
+     .enter().append("rect")
+     .attr("class", ".bar")
+     // Set x attribute based on Mois value 
+     .attr("x", function(d) { return x(d.Month); })
+     // Set width attribute based on scaleBand value 
+     .attr("width", x.bandwidth())
+     // Set y attribute based on Ventes value 
+     .attr("y", function(d) { return y(Number(d.Sales)); })
+     // Set height attribute based on scaleLinear value 
+     .attr("height", function(d) { return height - y(Number(d.Sales)); });
+ 
+ // Add labels for x-axis and y-axis 
+ svg.append("g")
+      // Move axis to bottom of chart 
+      .attr("transform", `translate(0, ${height})`)
+      // Call axisBottom function with scaleBand 
+      .call(d3.axisBottom(x));
+ svg.append("g")
+      // Call axisLeft function with scaleLinear 
+      .call(d3.axisLeft(y));
+ 
+ // Add title for chart 
+ svg.append("text")
+      // Position text at center of chart 
+      .attr("x", (width / 2))             
+      .attr("y", (margin.top /2))
+      // Center text horizontally  
+      .style('text-anchor', 'middle')
+      // Set font size  
+      .style('font-size', '20px')
+      // Change text content  
+      .text('Ventes par mois en 2019');

@@ -1,0 +1,47 @@
+[
+ {
+   "City": " Atlanta",
+   "State": "GA",
+   "Sales": 14881
+ },
+ {
+   "City": " Austin",
+   "State": "TX",
+   "Sales": 9905
+ },
+ {
+   "City": " Boston",
+   "State": "MA",
+   "Sales": 19934
+ },
+ {
+   "City": " Dallas",
+   "State": "TX",
+   "Sales": 14820
+ },
+ {
+   "City": " Los Angeles",
+   "State": "CA",
+   "Sales": 29605
+ },
+ {
+   "City": " New York",
+   "State": "NY",
+   "Sales": 24876
+ },
+ {
+   "City": " Portland",
+   "State": "OR",
+   "Sales": 12465
+ },
+ {
+   "City": " San Francisco",
+   "State": "CA",
+   "Sales": 44732
+ },
+ {
+   "City": " Seattle",
+   "State": "WA",
+   "Sales": 14732
+ }
+]

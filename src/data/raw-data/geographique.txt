@@ -1,0 +1,38 @@
+[
+ {
+   "City": " Atlanta",
+   "Sales": 14881
+ },
+ {
+   "City": " Austin",
+   "Sales": 9905
+ },
+ {
+   "City": " Boston",
+   "Sales": 19934
+ },
+ {
+   "City": " Dallas",
+   "Sales": 14820
+ },
+ {
+   "City": " Los Angeles",
+   "Sales": 29605
+ },
+ {
+   "City": " New York City",
+   "Sales": 24876
+ },
+ {
+   "City": " Portland",
+   "Sales": 12465
+ },
+ {
+   "City": " San Francisco",
+   "Sales": 44732
+ },
+ {
+   "City": " Seattle",
+   "Sales": 14732
+ }
+]
